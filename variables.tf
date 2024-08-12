@@ -1,8 +1,26 @@
-variable "user_name" {}
-variable "tenant_id" {}
-variable "user_domain_name" {}
-variable "password" {}
-variable "auth_url" {}
-variable "region" {}
-variable "external_network" {}
-variable "image_id" {}
+variable "user_name" {
+    default = "Default"
+}
+variable "tenant_id" {
+    default = "Default"
+}
+variable "user_domain_name" {
+    default = "Default"
+}
+variable "password" {
+    default = "Default"
+}
+variable "auth_url" {
+    default = "Default"
+}
+variable "region" {
+    default = "Default"
+}
+
+variable "external_network" {
+    default = "provider-net" 
+}
+
+variable "image_id" {
+    default = "cirros"
+}
