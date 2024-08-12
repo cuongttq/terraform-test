@@ -10,16 +10,15 @@ required_version = ">= 0.14.0"
 
 # Configure the OpenStack Provider
 provider "openstack" {
-  user_name   = "cuongttq@fpt.com.vn"
-  tenant_id = "d71d6b0ba8af4b40b6417366ddb72bfd"
-  tenant_name = "BMaaS-Service"
+  user_name   = "${var.user_name}"
+  tenant_id = "${var.tenant_id}"
+  tenant_name = "${var.tenant_name}"
   password    = "${var.password}"
-  auth_url    = "https://rose-staging.fptcloud.com:5000/v3"
-  region      = "HN01"
+  auth_url    = "${var.auth_url}"
+  region      = "${var.region}"
 }
 
 data "openstack_compute_instance_v2" "instance" {
-  # Randomly generated UUID, for demonstration purposes
   id = "caf61c6a-1070-462a-a9a4-256eeb857c2a"
 }
 
