@@ -7,9 +7,8 @@ variable "tenant_id" {
 variable "user_domain_name" {
     default = "Default"
 }
-variable "password" {
-    default = "Default"
-}
+variable "password" {}
+
 variable "auth_url" {
     default = "Default"
 }
