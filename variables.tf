@@ -1,11 +1,11 @@
 variable "user_name" {
-    default = "cuongttq@fpt.com.vn"
+    default = "huongnoihkt"
 }
 variable "tenant_id" {
-    default = "d71d6b0ba8af4b40b6417366ddb72bfd"
+    default = "dfc8d9f5c15f464aa140e51c17fe71c0"
 }
 variable "tenant_name" {
-    default = "BMaaS-Service"
+    default = "HACKATHON-HUONGNOIPARTTIME"
 }
 variable "auth_url" {
     default = "https://rose-staging.fptcloud.com:5000/v3"
@@ -14,10 +14,10 @@ variable "region" {
     default = "HN01"
 }
 variable "external_network" {
-    default = "provider-net" 
+    default = "provider-net3" 
 }
 variable "image_id" {
-    default = "41185ec0-f43f-408e-af0b-57a40391256f"
+    default = "b49a9f66-d9a8-4e55-a3c7-772dead91986"
 }
 variable "password" {
     default = "secret"
