@@ -18,6 +18,10 @@ provider "openstack" {
   region      = "HN01"
 }
 
+output "print_pass" {
+  value = var.password
+}
+
 data "openstack_compute_instance_v2" "instance" {
   # Randomly generated UUID, for demonstration purposes
   id = "caf61c6a-1070-462a-a9a4-256eeb857c2a"
