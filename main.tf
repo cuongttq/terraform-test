@@ -141,7 +141,7 @@ resource "openstack_compute_instance_v2" "webapp_instance" {
 
 resource "openstack_lb_loadbalancer_v2" "webapp" {
   name = "webapp"
-  vip_address = "192.168.10.100"
+  vip_address = "10.0.0.100"
   vip_subnet_id = openstack_networking_subnet_v2.webapp_subnet.id
   flavor_id = data.openstack_compute_flavor_v2.s2_medium_1.id
   admin_state_up = true
