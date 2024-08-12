@@ -82,9 +82,9 @@ resource "openstack_blockstorage_volume_v3" "webapp_volume" {
 }  
   
 # Instance  
-data "openstack_compute_keypair_v2" "webapp_key" {  
-  name = "webapp_key"  
-}  
+#data "openstack_compute_keypair_v2" "webapp_key" {  
+#  name = "webapp_key"  
+#}  
   
 data "openstack_compute_flavor_v2" "s2_medium_1" {  
   name = "4C4G"  
@@ -102,7 +102,7 @@ resource "openstack_compute_instance_v2" "webapp_instance" {
   name            = "webapp_instance"  
   image_id        = data.openstack_images_image_v2.ubuntu_image.id  
   flavor_id       = data.openstack_compute_flavor_v2.s2_medium_1.id  
-  key_pair        = data.openstack_compute_keypair_v2.webapp_key.name  
+  #key_pair        = data.openstack_compute_keypair_v2.webapp_key.name  
   security_groups = [openstack_compute_secgroup_v2.webapp_secgroup.name]  
   availability_zone = "nova"  
   
